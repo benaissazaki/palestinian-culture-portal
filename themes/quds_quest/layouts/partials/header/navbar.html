@@ -1,0 +1,34 @@
+{{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
+{{ with resources.Get "sass/navbar.sass" | toCSS $opts | minify | fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
+
+<header id="navbar">
+  <nav class="navbar-container container">
+    <a href="/" class="home-link">
+      <div class="navbar-logo"></div>
+      Quds Quest
+    </a>
+    <button type="button" class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false"
+      aria-controls="navbar-menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div id="navbar-menu" class="detached">
+      <ul class="navbar-links">
+        <li class="navbar-item"><a class="navbar-link" href="">About</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="">Entertainment</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="">Cuisine</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="">Clothes</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="">National Artifacts</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+{{ with resources.Get "js/navbar.js" | resources.Minify }}
+<script src="{{ .RelPermalink }}"></script>
+{{ end }}
