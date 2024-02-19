@@ -1,3 +1,7 @@
+body
+  margin: 0
+  font-family: Arial, Helvetica, sans-serif
+
 $container-breakpoint: 700px
 
 .container
@@ -7,3 +11,7 @@ $container-breakpoint: 700px
   .container
     padding: 0 20px
 
+.clearfix::after 
+  content: ""
+  clear: both
+  display: table
