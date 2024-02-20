@@ -1,0 +1,53 @@
+$footer-bg-color: #EAEAEA
+
+$footer-text-color: black
+$footer-text-color-focus: white
+
+footer.container
+  padding-top: 3rem
+  padding-bottom: 2rem
+  background-color: $footer-bg-color
+  display: flex
+  gap: 15rem
+  color: $footer-text-color
+
+  h3
+    text-decoration: underline
+
+  .footer-logo
+    width: 100px
+    display: block
+    margin: 0 auto
+
+  .social-icons
+    display: flex
+    gap: 15px
+    svg
+      width: 50px
+
+  .footer-internal-links
+    display: flex
+    gap: 5rem
+
+    ul
+      margin: 0
+      padding: 0
+      li
+        list-style: none
+        a
+          text-decoration: none
+          color: $footer-text-color
+      
+@media (max-width: 1120px) 
+  footer.container, .footer-internal-links
+    text-align: center
+    flex-direction: column
+    gap: 0 !important
+
+  .footer-internal-links
+    gap: 1rem !important
+  
+  footer div
+    width: 200px
+    margin: auto
+
