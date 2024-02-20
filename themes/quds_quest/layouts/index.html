@@ -4,11 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
-  {{ with resources.Get "sass/common.sass" | toCSS $opts | minify | fingerprint }}
+  {{ with resources.Get "sass/common.sass" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
-  {{ with resources.Get "sass/index.sass" | toCSS $opts | minify | fingerprint }}
+  {{ with resources.Get "sass/index.sass" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
   <title>{{ .Title }}</title>
@@ -28,6 +27,7 @@
       <h1>Your portal to the richness and diversity of the Palestinian Culture</h1>
     </div>
   </main>
+  {{ partial "footer.html" }}
 </body>
 
 </html>
