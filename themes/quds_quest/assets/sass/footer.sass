@@ -3,12 +3,14 @@ $footer-bg-color: #EAEAEA
 $footer-text-color: black
 $footer-text-color-focus: white
 
+$footer-breakpoint: 1120px
+
 footer.container
   padding-top: 3rem
   padding-bottom: 2rem
   background-color: $footer-bg-color
   display: flex
-  gap: 15rem
+  justify-content: space-around
   color: $footer-text-color
 
   h3
@@ -38,16 +40,24 @@ footer.container
           text-decoration: none
           color: $footer-text-color
       
-@media (max-width: 1120px) 
-  footer.container, .footer-internal-links
+@media (max-width: $footer-breakpoint) 
+  footer.container
     text-align: center
     flex-direction: column
     gap: 0 !important
 
+    .social-icons
+      justify-content: center
+
   .footer-internal-links
     gap: 1rem !important
+    justify-content: space-between
   
-  footer div
+  .footer-internal-links div
     width: 200px
-    margin: auto
+    margin: 0 auto
 
+@media (max-width: 443px)
+   .footer-internal-links
+      flex-direction: column
+      gap: 0 !important
