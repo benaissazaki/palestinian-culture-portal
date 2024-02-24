@@ -62,6 +62,39 @@ h1
   text-align: center
   background-color: grey
 
+
+section.categories
+  >div
+    display: flex
+    justify-content: center
+    gap: 20px
+    flex-wrap: wrap
+
+    .category
+      border: solid 1px #8E8D8D
+      height: 300px
+      width: 200px
+      padding: 20px
+      background-size: cover !important
+
+
+      &:nth-child(1)
+        background: rgba(0, 0, 0, 0.363) url('https://www.welcometopalestine.com/wp-content/uploads/2016/11/Aubergine-Courgette-Chickpea-Stew-1-1024x648.jpg')
+        background-blend-mode: multiply
+
+      &:nth-child(2)
+        background: rgba(0, 0, 0, 0.363) url('https://cdn-i.pr.trt.com.tr/trtworld/w664/h374/q70/0m_131769_psepalestinianwomenother_1652361142230.png')
+        background-blend-mode: multiply
+
+      &:nth-child(3)
+        background: rgba(0, 0, 0, 0.363) url('https://www.aljazeera.com/wp-content/uploads/2022/11/IMG_7330-e1668081280401.jpeg?resize=770%2C513&quality=80')
+        background-blend-mode: multiply
+
+      h3 
+        color: white
+        font-size: 1.5rem
+
+
 section.fact
   margin-top: 20px
   text-align: center
@@ -85,13 +118,6 @@ section.gallery
 
   .text
     max-width: 300px
-
-    h2
-      font-size: 2rem
-
-    p, button
-      font-size: 1.3rem
-
 
   .images
     display: grid
@@ -131,4 +157,3 @@ section.map
     display: block
     margin-left: auto
     margin-right: auto
-    
