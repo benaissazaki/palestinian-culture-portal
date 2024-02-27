@@ -3,7 +3,7 @@ $top-offset: 64px
 .slider
   overflow: hidden
   width: 100%
-  height: calc(100vh - #{$top-offset} - 50px)
+  height: calc(100vh - #{$top-offset})
   position: relative
 
   .slide
@@ -49,18 +49,23 @@ $top-offset: 64px
     transform: translateX(100%)
     animation-timing-function: ease
 
+.overlay
+  box-sizing: border-box
+  position: absolute
+  padding: 2rem
+  top: $top-offset
+  height: calc(100vh - #{$top-offset})
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #00000075
+
 h1
-  position: relative
-  display: block
-  max-width: 800px
-  margin: 0 auto
-  margin-top: -20px
-  padding: 10px
-  font-size: 1.3rem
-  border-radius: 10px
+  font-size: 2.4rem
+  color: white
   z-index: 9999
   text-align: center
-  background-color: grey
 
 
 section.categories
