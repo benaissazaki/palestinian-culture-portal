@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://benaissazaki.github.io/quds-quest'
 languageCode = 'en-us'
 title = 'Quds Quest'
 theme = 'quds_quest'
