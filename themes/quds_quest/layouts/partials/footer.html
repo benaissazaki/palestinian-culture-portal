@@ -4,8 +4,10 @@
 
 <footer class="container">
   <div>
-    <img src="https://csncollision.com/wp-content/uploads/2019/10/placeholder-circle-250x250.png" alt="Quds quest logo"
+    {{ with resources.Get "img/logo.png" }}
+    <img src="{{ .RelPermalink }}" alt="Quds quest logo" width="300px"
       class="footer-logo">
+      {{ end }}
     <div class="social-icons">
       <a href="#">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
