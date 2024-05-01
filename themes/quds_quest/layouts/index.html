@@ -53,8 +53,8 @@
       </div>
     </section>
 
-    <section class="fact container">
-      <div class="content">
+    <section class="fact">
+      <div class="container content">
         <h2>Did you know?</h2>
         <p>
           Palestine was first documented in ancient Egyptian tablets as Peleset over 3000 years ago,
@@ -83,10 +83,14 @@
       </div>
     </section>
     <section class="map container">
-      <h2>The Map of Palestine</h2>
+      <div>
+        <img src="{{ relURL "img/keffiyeh.png" }}" alt="Plaestinian keffiyeh" class="keffiyeh-decoration">
+        <h2>The Map of Palestine</h2>
+      </div>
       <img
         src="https://imgs.search.brave.com/VYmubiHzP2TbCJ1jg93Z0kwLfaGPZ_KfyHClk58YxPU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzYxL2Fm/Lzk2LzYxYWY5NmY2/NmEyNjE0OTZiY2Vi/OTNjY2FjNDVmNTZk/LmpwZw"
-        alt="Map of Palestine">
+        alt="Map of Palestine"
+        class="map-img">
     </section>
   </main>
   {{ partial "footer.html" }}
