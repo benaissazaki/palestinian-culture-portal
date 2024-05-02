@@ -16,7 +16,7 @@
   {{ with resources.Get "sass/index.sass" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
-  <link rel="shortcut icon" href="{{ relURL "img/favicon.png" }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ relURL " img/favicon.png" }}" type="image/x-icon">
   <title>{{ .Title }}</title>
 </head>
 
@@ -63,32 +63,33 @@
       <div class="text">
         <h2>A rich culture shown in images</h2>
         <p>
-          A place of beauty and love, this gallery shows the many beautiful colors of Palestine. 
+          A place of beauty and love, this gallery shows the many beautiful colors of Palestine.
         </p>
         <button>Take a look &#8594;</button>
       </div>
       <div class="images">
-        
-          <img
-            src="{{ relURL "img/al_quds.jpg" }}"
-            alt="Al Quds dome of the rock">
-        <img
-          src="{{ relURL "img/nablus-old-city-arch.jpg" }}"
-          alt="Nablus old city arch">
-        <img
-          src="{{ relURL "img/gaza-city.jpg" }}"
-          alt="Gaza City">
+
+        {{ with resources.Get "img/al_quds.png" }}
+        <img src="{{ .RelPermalink }}" alt="Al Quds dome of the rock">
+        {{ end }}
+        {{ with resources.Get "img/nablus-old-city-arch.jpg" }}
+        <img src="{{ .RelPermalink }}" alt="Nablus old city arch">
+        {{ end }}
+        {{ with resources.Get "img/gaza-city.jpg" }}
+        <img src="{{ .RelPermalink }}" alt="Gaza City">
+        {{ end}}
       </div>
     </section>
     <section class="map container">
       <div>
-        <img src="{{ relURL "img/keffiyeh.png" }}" alt="Palestinian keffiyeh" class="keffiyeh-decoration">
+        {{ with resources.Get "img/keffiyeh.png" }}
+        <img src="{{ .RelPermalink }}" alt="Palestinian keffiyeh" class="keffiyeh-decoration">
+        {{ end }}
         <h2>The Map of Palestine</h2>
       </div>
       <img
         src="https://imgs.search.brave.com/VYmubiHzP2TbCJ1jg93Z0kwLfaGPZ_KfyHClk58YxPU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzYxL2Fm/Lzk2LzYxYWY5NmY2/NmEyNjE0OTZiY2Vi/OTNjY2FjNDVmNTZk/LmpwZw"
-        alt="Map of Palestine"
-        class="map-img">
+        alt="Map of Palestine" class="map-img">
     </section>
   </main>
   {{ partial "footer.html" }}

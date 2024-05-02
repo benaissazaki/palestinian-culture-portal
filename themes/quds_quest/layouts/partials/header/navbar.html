@@ -5,7 +5,9 @@
 <header id="navbar">
   <nav class="navbar-container container">
     <a href="/" class="home-link">
-      <img src="{{ .relURL "img/logo.png" }}" alt="Quds Quest">
+      {{ with resources.Get "img/logo.png" }}
+      <img src="{{ .RelPermalink }}" alt="Quds Quest">
+      {{ end }}
     </a>
     <button type="button" class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false"
       aria-controls="navbar-menu">
