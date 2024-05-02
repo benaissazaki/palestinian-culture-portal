@@ -16,9 +16,7 @@
   {{ with resources.Get "sass/index.sass" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
-  {{ with resources.Get "img/logo.png" }}
-  <link rel="shortcut icon" href="{{ .RelPermalink }}" type="image/x-icon">
-  {{ end }}
+  <link rel="shortcut icon" href="{{ relURL "img/favicon.png" }}" type="image/x-icon">
   <title>{{ .Title }}</title>
 </head>
 
@@ -84,7 +82,7 @@
     </section>
     <section class="map container">
       <div>
-        <img src="{{ relURL "img/keffiyeh.png" }}" alt="Plaestinian keffiyeh" class="keffiyeh-decoration">
+        <img src="{{ relURL "img/keffiyeh.png" }}" alt="Palestinian keffiyeh" class="keffiyeh-decoration">
         <h2>The Map of Palestine</h2>
       </div>
       <img
